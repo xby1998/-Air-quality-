@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>全国空气质量实时查询</title>
+<!--    导入css渲染-->
+    <link type="text/css" href="../static/css/current_time.css" rel="stylesheet" />
+<!--    导入有关的配置文件-->
+    <script src="../static/js/jquery.js"></script>
+    <script src="../static/js/echarts.min.js"></script>
+    <script src="../static/js/china.js"></script>
+</head>
+<body>
+    <div id="title">全国空气质量实时查询</div>
+    <div id="time_now">2021/6/29</div>
+    <div id="time_update">2021/6/28</div>
+    <div id="change">
+        <button onclick="tz()">城市空气质量查询</button>
+        <button>全国空气质量查询</button>
+<!--        页面切换-->
+        <script type="text/javascript" language="javascript">
+            function tz(){
+                window.location.href='http://127.0.0.1:5000/visual_histroy';}
+        </script>
+    </div>
+    <div id="table1">
+        <form id="form2" style="text-alige:left">
+            <h1>省份
+                <input type="text" name="province_name" style="height:30px;width:160px;font-size:30px;">
+                <input type="submit" value="点击查询">
+<!--                提交-->
+            </h1>
+        </form>
+    </div>
+    <div id="chinaMap">全国地图</div>
+    <div id="Pie">全国空气质量饼图</div>
+    <div id="rank">全国各省空气质量排名</div>
+<!--    具体模块的实现-->
+    <script src="../static/js/cur_Pie_table.js"></script>
+    <script src="../static/js/cur_rank_table.js"></script>
+    <script src="../static/js/cur_map_table.js"></script>
+    <script src="../static/js/cur_control.js"></script>
+</body>
+</html>

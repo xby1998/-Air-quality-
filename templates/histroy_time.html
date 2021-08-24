@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>城市空气质量历史查询</title>
+    <link type="text/css" href="../static/css/histroy_time.css" rel="stylesheet" />
+    <script src="../static/js/echarts.min.js"></script>
+    <script src="../static/js/jquery.js"></script>
+</head>
+<body>
+    <div id="title">城市空气质量查询</div>
+    <div id="time_now"></div>
+    <div id="time_update"></div>
+    <div id="change">
+        <button>城市空气质量查询</button>
+        <button onclick="tz()">全国空气质量查询</button>
+        <script type="text/javascript" language="javascript">
+            function tz(){
+                window.location.href='http://127.0.0.1:5000/visual_current';}
+        </script>
+    </div>
+    <div id="table">
+        <form id="form1" style="text-alige:left">
+            <h1>城市
+                <input type="text" name="city" style="height:30px;width:160px;font-size:30px;">
+                月份
+                <input type="text" name="time" style="height:30px;width:160px;font-size:30px;">
+                <input type="submit" value="点击查询">
+            </h1>
+        </form>
+    </div>
+    <div id="city_data">
+        <div id="city_main">
+            <div id="city_name"></div>
+            <div id="num"></div>
+            <div id="status"></div>
+            <div id="warn1"></div>
+            <div id="warn2"></div>
+        </div>
+        <div class="pollute">
+            <div id="pollute1">
+                <div class="cate" id="p_one"></div>
+                <div class="cate" id="p_two"></div>
+                <div class="cate" id="p_three"></div>
+            </div>
+            <div id="pollute2">
+                <div class="cate" id="p_four"></div>
+                <div class="cate" id="p_five"></div>
+                <div class="cate" id="p_six"></div>
+            </div>
+        </div>
+    </div>
+    <div id="Pie">城市空气质量饼图</div>
+    <div id="Line">城市空气质量变化</div>
+    <script src="../static/js/his_Line.js"></script>
+    <script src="../static/js/his_Pie.js"></script>
+    <script src="../static/js/his_control.js"></script>
+    <script src="../static/js/flexible.js"></script>
+</body>
+</html>
